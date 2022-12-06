@@ -28,4 +28,4 @@ jobs:
             override: true
       - run: cargo publish --token ${CRATES_TOKEN}
         env:
-          CRATES_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+          CRATES_TOKEN: cioorOyQUzh1K2k0IJaBRVs0n8VCaDhjTRi
