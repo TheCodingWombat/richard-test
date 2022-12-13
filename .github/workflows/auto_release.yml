@@ -8,16 +8,6 @@ on:
 
 
 jobs:
-  github-release:
-    name: "Tagged Release"
-    runs-on: "ubuntu-latest"
-
-    steps:
-      - uses: actions/checkout@v3
-      - uses: "marvinpinto/action-automatic-releases@v1.2.1"
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          prerelease: false
   crates-release:
     runs-on: "ubuntu-latest"
     steps:
