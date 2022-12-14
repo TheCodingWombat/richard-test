@@ -1,15 +1,7 @@
-// #![feature(register_tool)]
-// #![register_tool(myclippy)]
-#[warn(
-    clippy::disallowed_methods,
-    clippy::indexing_slicing,
-    clippy::todo,
-    clippy::unwrap_used,
-    clippy::panic
-)]
 mod auxiliary;
 
-pub struct Twox64Concat;
+use auxiliary::frame_support::storage::types::map::StorageMap as Bar;
+use auxiliary::frame_support::hash::Twox64Concat;
 
 fn main() {
     println!("Hello, world!");
@@ -21,4 +13,8 @@ fn main() {
     } else {
         print!("b");
     }
+
+    auxiliary::missing_security_doc::test();
 }
+
+pub type Foo2<K, V> = Bar<Twox64Concat, K, V>;
